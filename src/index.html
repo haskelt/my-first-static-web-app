@@ -18,6 +18,7 @@
 <script>
     (async function () {
 	let response = await fetch(`https://v-thaskell-func.azurewebsites.net/api/HttpExample?name=foo`, { mode: 'no-cors'});
+	console.log(response);
       let message = await response.text();
 
       document.querySelector("#message").innerHTML = message.text
