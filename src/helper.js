@@ -3,6 +3,8 @@ function update () {
     fetch(`https://v-thaskell-func.azurewebsites.net/api/HttpExample?name=foo`, { mode: 'no-cors'})
 	.then(response => {
 	    if (!response.ok) {
+		console.log(response.status);
+		console.log(response.statusText);
 		throw new Error('Network response was not OK');
 	    }
 	    return response.text()})
