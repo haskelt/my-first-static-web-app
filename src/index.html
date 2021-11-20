@@ -12,7 +12,16 @@
   <main>
     <h1>Vanilla JavaScript App</h1>
     <p>And here is an edit, to see what happens when I commit.</p>
+    <p id="message"></p>
   </main>
 </body>
+<script>
+    (async function () {
+      let response = await fetch(`https://v-thaskell-func.azurewebsites.net/api/HttpExample?name=foo`);
+      let message = await response.json();
+
+      document.querySelector("#message").innerHTML = message.text
+    })();
+  </script>
 
 </html>
