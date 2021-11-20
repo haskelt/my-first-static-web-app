@@ -1,6 +1,6 @@
 function update () {
     console.log('in update');
-    fetch(`https://v-thaskell-func.azurewebsites.net/api/HttpExample?name=foo`, { mode: 'no-cors'})
+    fetch(`https://v-thaskell-func.azurewebsites.net/api/HttpExample?name=foo`)
 	.then(response => {
 	    if (!response.ok) {
 		console.log(response.status);
